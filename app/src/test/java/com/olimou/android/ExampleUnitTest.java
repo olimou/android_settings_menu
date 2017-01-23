@@ -1,4 +1,4 @@
-package com.olimou.android.settings_menu;
+package com.olimou.android;
 
 import org.junit.Test;
 
