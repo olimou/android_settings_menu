@@ -57,12 +57,14 @@ public class SettingsSwitch extends FrameLayout {
 		txtTitle = (AppCompatTextView) findViewById(R.id.txt_title);
 		txtContent = (AppCompatTextView) findViewById(R.id.txt_content);
 
-		mView.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				btnSwitch.setChecked(!btnSwitch.isChecked());
-			}
-		});
+		if (!isInEditMode()) {
+			mView.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					btnSwitch.setChecked(!btnSwitch.isChecked());
+				}
+			});
+		}
 
 		if (_attrs != null) {
 			TypedArray a = getContext().getTheme()
