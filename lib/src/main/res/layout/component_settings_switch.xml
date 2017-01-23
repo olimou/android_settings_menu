@@ -2,12 +2,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			 android:layout_width="match_parent"
 			 android:layout_height="wrap_content"
-			 android:background="@color/white"
-			 android:orientation="horizontal">
+			 android:background="@color/white">
 
 	<LinearLayout
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
+		android:layout_height="wrap_content"
 		android:orientation="vertical">
 
 		<android.support.v7.widget.AppCompatTextView
@@ -36,15 +35,12 @@
 			android:lineSpacingExtra="6sp"
 			android:text="Content"/>
 
-		<include
-			android:id="@+id/line_bottom"
-			layout="@layout/component_settings_line"
-			android:layout_width="match_parent"
-			android:layout_height="1dp"/>
+		<include layout="@layout/component_settings_line"/>
 	</LinearLayout>
 
 	<android.support.v7.widget.SwitchCompat
 		android:id="@+id/btn_switch"
+		style="@style/Widget.AppCompat.CompoundButton.Switch"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_gravity="right"
