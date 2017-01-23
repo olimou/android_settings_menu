@@ -44,6 +44,11 @@
 		app:icon="@drawable/ic_attachment_black_24dp"
 		app:title="Notificações"/>
 
+	<com.olimou.android.settings_menu.SettingsHeader
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:title="Header"/>
+
 	<com.olimou.android.settings_menu.SettingsDivider
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"/>
@@ -54,9 +59,10 @@
 		app:content="Verificar o conteúdo"
 		app:title="Conteúdo"/>
 
-	<com.olimou.android.settings_menu.SettingsSwitch
+	<com.olimou.android.settings_menu.SettingsButton
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		app:content="Verificar o conteúdo"
-		app:title="Conteúdo"/>
+		app:action_icon="@drawable/ic_android_black_24dp"
+		app:icon="@drawable/ic_attachment_black_24dp"
+		app:title="Notificações"/>
 </LinearLayout>

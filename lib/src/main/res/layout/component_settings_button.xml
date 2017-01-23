@@ -36,6 +36,5 @@
 		android:tint="@color/grey_600"/>
 
 	<include
-		android:id="@+id/line"
 		layout="@layout/component_settings_line"/>
 </FrameLayout>
