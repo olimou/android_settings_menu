@@ -35,6 +35,9 @@
 		android:layout_marginTop="12dp"
 		android:tint="@color/grey_600"/>
 
-	<include
-		layout="@layout/component_settings_line"/>
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_gravity="bottom"
+		android:background="@color/grey_300"/>
 </FrameLayout>

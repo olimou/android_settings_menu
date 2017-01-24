@@ -7,7 +7,6 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.FrameLayout;
 
 import static com.olimou.android.settings_menu.R.styleable.SettingsButton_action_icon;
@@ -19,7 +18,6 @@ import static com.olimou.android.settings_menu.R.styleable.SettingsButton_title;
  */
 
 public class SettingsButton extends FrameLayout {
-	private View mView;
 
 	public SettingsButton(Context context) {
 		super(context);
@@ -50,7 +48,7 @@ public class SettingsButton extends FrameLayout {
 	}
 
 	public void init(AttributeSet _attrs) {
-		mView = inflate(getContext(), R.layout.component_settings_button, this);
+		inflate(getContext(), R.layout.component_settings_button, this);
 
 		if (_attrs != null) {
 			TypedArray a = getContext().getTheme()
