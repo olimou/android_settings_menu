@@ -21,7 +21,6 @@ import static com.olimou.android.settings_menu.R.styleable.SettingsSwitch_title;
 public class SettingsSwitch extends FrameLayout {
 
 	private SwitchCompat      btnSwitch;
-	private View              mView;
 	private AppCompatTextView txtContent;
 	private AppCompatTextView txtTitle;
 
@@ -51,14 +50,14 @@ public class SettingsSwitch extends FrameLayout {
 	}
 
 	public void init(AttributeSet _attrs) {
-		mView = inflate(getContext(), R.layout.component_settings_switch, this);
+		inflate(getContext(), R.layout.component_settings_switch, this);
 
 		btnSwitch = (SwitchCompat) findViewById(R.id.btn_switch);
 		txtTitle = (AppCompatTextView) findViewById(R.id.txt_title);
 		txtContent = (AppCompatTextView) findViewById(R.id.txt_content);
 
 		if (!isInEditMode()) {
-			mView.setOnClickListener(new OnClickListener() {
+			setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
 					btnSwitch.setChecked(!btnSwitch.isChecked());
@@ -86,9 +85,5 @@ public class SettingsSwitch extends FrameLayout {
 
 	public void setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener _change) {
 		btnSwitch.setOnCheckedChangeListener(_change);
-	}
-
-	public void setOnClickListener(OnClickListener _onClickListener) {
-		mView.setOnClickListener(_onClickListener);
 	}
 }
