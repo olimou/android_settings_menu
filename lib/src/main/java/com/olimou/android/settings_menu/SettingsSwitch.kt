@@ -18,8 +18,6 @@ import com.olimou.android.settings_menu.R.styleable.SettingsSwitch_title
  * Created by EmersonMoura on 9/6/16.
  */
 
-@BindingMethods(BindingMethod(type = SettingsSwitch::class, attribute = "app:onChanged",
-        method = "setOnCheckedChangeListener"))
 class SettingsSwitch : FrameLayout {
 
     private lateinit var btnSwitch: SwitchCompat
