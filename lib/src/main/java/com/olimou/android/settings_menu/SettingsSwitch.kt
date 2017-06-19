@@ -68,7 +68,7 @@ class SettingsSwitch : FrameLayout {
     }
 
     fun invert() {
-        checked != checked
+        checked = !checked
     }
 
     var checked: Boolean
