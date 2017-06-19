@@ -68,9 +68,7 @@ class SettingsSwitch : FrameLayout {
     }
 
     fun invert() {
-        btnSwitch.setOnCheckedChangeListener(null)
-        btnSwitch.isChecked = !btnSwitch.isChecked
-        btnSwitch.setOnCheckedChangeListener(listener)
+        checked != checked
     }
 
     var checked: Boolean
