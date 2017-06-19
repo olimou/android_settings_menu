@@ -1,8 +1,6 @@
 package com.olimou.android.settings_menu
 
 import android.content.Context
-import android.databinding.BindingMethod
-import android.databinding.BindingMethods
 import android.os.Build
 import android.support.annotation.RequiresApi
 import android.support.v7.widget.AppCompatTextView
@@ -75,10 +73,12 @@ class SettingsSwitch : FrameLayout {
         btnSwitch.setOnCheckedChangeListener(listener)
     }
 
-    var isChecked: Boolean
+    var checked: Boolean
         get() = btnSwitch.isChecked
         set(_checked) {
+            btnSwitch.setOnCheckedChangeListener(null)
             btnSwitch.isChecked = _checked
+            btnSwitch.setOnCheckedChangeListener(listener)
         }
 
     fun setOnCheckedChangeListener(_change: CompoundButton.OnCheckedChangeListener) {
