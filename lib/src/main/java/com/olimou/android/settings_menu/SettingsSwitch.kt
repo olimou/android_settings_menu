@@ -83,4 +83,11 @@ class SettingsSwitch : FrameLayout {
         listener = _change
         btnSwitch.setOnCheckedChangeListener(_change)
     }
+
+    override fun setEnabled(enabled: Boolean) {
+        super.setEnabled(enabled)
+        (0 until this.childCount).forEach {
+            getChildAt(it)?.isEnabled = enabled
+        }
+    }
 }
