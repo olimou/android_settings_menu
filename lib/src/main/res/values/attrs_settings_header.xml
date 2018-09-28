@@ -1,5 +1,5 @@
 <resources>
 	<declare-styleable name="SettingsHeader">
-		<attr name="title"/>
+		<attr name="SB_title"/>
 	</declare-styleable>
 </resources>
