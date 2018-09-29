@@ -39,7 +39,7 @@ dependencies {
     implementation 'com.github.olimou:android_material_specs:0.0.4'
     testImplementation 'junit:junit:4.12'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    kapt "androidx.databinding:compiler:$gradle_version"
+    kapt "androidx.databinding:databinding-compiler:$gradle_version"
 }
 repositories {
     mavenCentral()
