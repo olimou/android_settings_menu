@@ -9,9 +9,9 @@ import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-import static com.olimou.android.settings_menu.R.styleable.SettingsButton_action_icon;
-import static com.olimou.android.settings_menu.R.styleable.SettingsButton_icon;
-import static com.olimou.android.settings_menu.R.styleable.SettingsButton_title;
+import static com.olimou.android.settings_menu.R.styleable.SettingsButton_SB_action_icon;
+import static com.olimou.android.settings_menu.R.styleable.SettingsButton_SB_icon;
+import static com.olimou.android.settings_menu.R.styleable.SettingsButton_SB_title;
 
 /**
  * Created by EmersonMoura on 9/6/16.
@@ -55,17 +55,17 @@ public class SettingsButton extends FrameLayout {
 					.obtainStyledAttributes(_attrs, R.styleable.SettingsButton, 0, 0);
 
 			((AppCompatTextView) findViewById(R.id.txt_content))
-					.setText(a.getString(SettingsButton_title));
+					.setText(a.getString(SettingsButton_SB_title));
 
 			AppCompatImageView lImgViewIcon = (AppCompatImageView) findViewById(R.id.img_icon);
 
-			lImgViewIcon.setImageResource(a.getResourceId(SettingsButton_icon,
+			lImgViewIcon.setImageResource(a.getResourceId(SettingsButton_SB_icon,
 					R.drawable.ic_android_black_24dp));
 
 			AppCompatImageView lImgViewIconAction = (AppCompatImageView) findViewById(
 					R.id.img_icon_action);
 
-			lImgViewIconAction.setImageResource(a.getResourceId(SettingsButton_action_icon,
+			lImgViewIconAction.setImageResource(a.getResourceId(SettingsButton_SB_action_icon,
 					R.drawable.ic_chevron_right_black_24dp));
 		}
 	}

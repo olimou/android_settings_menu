@@ -9,8 +9,6 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.CompoundButton
 import android.widget.FrameLayout
-import com.olimou.android.settings_menu.R.styleable.SettingsSwitch_content
-import com.olimou.android.settings_menu.R.styleable.SettingsSwitch_title
 
 /**
  * Created by EmersonMoura on 9/6/16.
@@ -61,9 +59,9 @@ class SettingsSwitch : FrameLayout {
             val a = context.theme
                     .obtainStyledAttributes(_attrs, R.styleable.SettingsSwitch, 0, 0)
 
-            txtTitle.text = a.getString(SettingsSwitch_title)
+            txtTitle.text = a.getString(R.styleable.SettingsSwitch_SB_title)
 
-            txtContent.text = a.getString(SettingsSwitch_content)
+            txtContent.text = a.getString(R.styleable.SettingsSwitch_SB_content)
         }
     }
 

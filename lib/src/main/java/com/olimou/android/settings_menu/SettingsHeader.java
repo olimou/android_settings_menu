@@ -9,8 +9,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import static com.olimou.android.settings_menu.R.styleable.SettingsHeader_title;
-
 /**
  * Created by EmersonMoura on 9/6/16.
  */
@@ -53,7 +51,7 @@ public class SettingsHeader extends FrameLayout {
 
 			AppCompatTextView lTxtTitle = (AppCompatTextView) findViewById(R.id.txt_title);
 
-			lTxtTitle.setText(a.getString(SettingsHeader_title));
+			lTxtTitle.setText(a.getString(R.styleable.SettingsHeader_SB_title));
 		}
 	}
 }
