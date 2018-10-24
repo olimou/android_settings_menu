@@ -43,5 +43,6 @@ dependencies {
     kapt "androidx.databinding:databinding-compiler:$gradle_version"
 }
 repositories {
+    google()
     mavenCentral()
 }
