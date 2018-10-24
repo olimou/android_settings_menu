@@ -1,7 +1,0 @@
-<resources>
-	<declare-styleable name="SettingsSeek">
-		<attr name="SB_title"/>
-		<attr name="SB_content" format="string"/>
-		<attr name="SB_progress" format="integer"/>
-	</declare-styleable>
-</resources>

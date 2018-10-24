@@ -10,21 +10,21 @@
     <com.olimou.android.settings_menu.SettingsHeader
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:SB_title="Header"/>
+        app:title="Header"/>
 
     <com.olimou.android.settings_menu.SettingsButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:SB_action_icon="@drawable/ic_android_black_24dp"
-        app:SB_icon="@drawable/ic_attachment_black_24dp"
-        app:SB_title="Notificações"/>
+        app:action_icon="@drawable/ic_android_black_24dp"
+        app:icon="@drawable/ic_attachment_black_24dp"
+        app:title="Notificações"/>
 
     <com.olimou.android.settings_menu.SettingsButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:SB_action_icon="@drawable/ic_android_black_24dp"
-        app:SB_icon="@drawable/ic_attachment_black_24dp"
-        app:SB_title="Notificações"/>
+        app:action_icon="@drawable/ic_android_black_24dp"
+        app:icon="@drawable/ic_attachment_black_24dp"
+        app:title="Notificações"/>
 
     <com.olimou.android.settings_menu.SettingsDivider
         android:layout_width="match_parent"
@@ -33,14 +33,14 @@
     <com.olimou.android.settings_menu.SettingsButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:SB_action_icon="@drawable/ic_android_black_24dp"
-        app:SB_icon="@drawable/ic_attachment_black_24dp"
-        app:SB_title="Notificações"/>
+        app:action_icon="@drawable/ic_android_black_24dp"
+        app:icon="@drawable/ic_attachment_black_24dp"
+        app:title="Notificações"/>
 
     <com.olimou.android.settings_menu.SettingsHeader
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:SB_title="Header"/>
+        app:title="Header"/>
 
     <com.olimou.android.settings_menu.SettingsDivider
         android:layout_width="match_parent"
@@ -49,20 +49,20 @@
     <com.olimou.android.settings_menu.SettingsSwitch
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:SB_content="Verificar o conteúdo"
-        app:SB_title="Conteúdo"/>
+        app:text="Verificar o conteúdo"
+        app:title="Conteúdo"/>
 
     <com.olimou.android.settings_menu.SettingsButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:SB_action_icon="@drawable/ic_android_black_24dp"
-        app:SB_icon="@drawable/ic_attachment_black_24dp"
-        app:SB_title="Notificações"/>
+        app:action_icon="@drawable/ic_android_black_24dp"
+        app:icon="@drawable/ic_attachment_black_24dp"
+        app:title="Notificações"/>
 
     <com.olimou.android.settings_menu.SettingsSeek
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:SB_content="Volume"
-        app:SB_progress="90"
-        app:SB_title="Volume"/>
+        app:text="Volume"
+        app:progress="90"
+        app:title="Volume"/>
 </LinearLayout>

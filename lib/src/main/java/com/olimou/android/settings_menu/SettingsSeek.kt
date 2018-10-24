@@ -1,8 +1,6 @@
 package com.olimou.android.settings_menu
 
 import android.content.Context
-import android.os.Build
-import android.support.annotation.RequiresApi
 import android.support.constraint.ConstraintLayout
 import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
@@ -46,9 +44,9 @@ class SettingsSeek : ConstraintLayout {
             val a = context.theme
                     .obtainStyledAttributes(_attrs, R.styleable.SettingsSeek, 0, 0)
 
-            txtTitle.text = a.getString(R.styleable.SettingsSeek_SB_title)
+            txtTitle.text = a.getString(R.styleable.SettingsSeek_title)
 
-            txtContent.text = a.getString(R.styleable.SettingsSeek_SB_content)
+            txtContent.text = a.getString(R.styleable.SettingsSeek_text)
         }
     }
 

@@ -1,0 +1,22 @@
+<resources>
+    <declare-styleable name="SettingsButton">
+        <attr name="title"/>
+        <attr name="icon"/>
+        <attr name="action_icon" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="SettingsHeader">
+        <attr name="title"/>
+    </declare-styleable>
+
+    <declare-styleable name="SettingsSeek">
+        <attr name="title"/>
+        <attr name="text"/>
+        <attr name="progress" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="SettingsSwitch">
+        <attr name="title"/>
+        <attr name="text"/>
+    </declare-styleable>
+</resources>

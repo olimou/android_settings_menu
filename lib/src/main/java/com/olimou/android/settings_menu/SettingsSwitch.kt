@@ -38,9 +38,9 @@ class SettingsSwitch : ConstraintLayout {
     fun init(_attrs: AttributeSet?) {
         View.inflate(context, R.layout.component_settings_switch, this)
 
-        btnSwitch = findViewById(R.id.btn_switch) as SwitchCompat
-        txtTitle = findViewById(R.id.txt_title) as AppCompatTextView
-        txtContent = findViewById(R.id.txt_content) as AppCompatTextView
+        btnSwitch = findViewById(R.id.btn_switch)
+        txtTitle = findViewById(R.id.txt_title)
+        txtContent = findViewById(R.id.txt_content)
 
         if (!isInEditMode) {
             setOnClickListener { btnSwitch.isChecked = !btnSwitch.isChecked }
@@ -50,9 +50,9 @@ class SettingsSwitch : ConstraintLayout {
             val a = context.theme
                     .obtainStyledAttributes(_attrs, R.styleable.SettingsSwitch, 0, 0)
 
-            txtTitle.text = a.getString(R.styleable.SettingsSwitch_SB_title)
+            txtTitle.text = a.getString(R.styleable.SettingsSwitch_title)
 
-            txtContent.text = a.getString(R.styleable.SettingsSwitch_SB_content)
+            txtContent.text = a.getString(R.styleable.SettingsSwitch_text)
         }
     }
 

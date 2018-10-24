@@ -1,7 +1,0 @@
-<resources>
-	<declare-styleable name="SettingsButton">
-		<attr name="SB_title" format="string"/>
-		<attr name="SB_icon" format="reference"/>
-		<attr name="SB_action_icon" format="reference"/>
-	</declare-styleable>
-</resources>
