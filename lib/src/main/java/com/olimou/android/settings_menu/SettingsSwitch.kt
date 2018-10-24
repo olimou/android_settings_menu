@@ -1,20 +1,18 @@
 package com.olimou.android.settings_menu
 
 import android.content.Context
-import android.os.Build
-import android.support.annotation.RequiresApi
+import android.support.constraint.ConstraintLayout
 import android.support.v7.widget.AppCompatTextView
 import android.support.v7.widget.SwitchCompat
 import android.util.AttributeSet
 import android.view.View
 import android.widget.CompoundButton
-import android.widget.FrameLayout
 
 /**
  * Created by EmersonMoura on 9/6/16.
  */
 
-class SettingsSwitch : FrameLayout {
+class SettingsSwitch : ConstraintLayout {
 
     private lateinit var btnSwitch: SwitchCompat
     private var listener: CompoundButton.OnCheckedChangeListener? = null
@@ -33,13 +31,6 @@ class SettingsSwitch : FrameLayout {
 
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs,
             defStyleAttr) {
-
-        init(attrs)
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int) : super(
-            context, attrs, defStyleAttr, defStyleRes) {
 
         init(attrs)
     }

@@ -36,6 +36,7 @@ dependencies {
     })
     implementation "com.android.support:appcompat-v7:$support_version"
     implementation "com.android.support:design:$support_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.github.olimou:android_material_specs:0.0.4'
     testImplementation 'junit:junit:4.12'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
