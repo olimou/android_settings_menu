@@ -1,6 +1,0 @@
-<resources>
-	<declare-styleable name="SettingsSwitch">
-		<attr name="SB_title"/>
-		<attr name="SB_content" format="string"/>
-	</declare-styleable>
-</resources>

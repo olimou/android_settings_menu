@@ -1,20 +1,18 @@
 package com.olimou.android.settings_menu
 
 import android.content.Context
-import android.os.Build
-import android.support.annotation.RequiresApi
+import android.support.constraint.ConstraintLayout
 import android.support.v7.widget.AppCompatTextView
 import android.support.v7.widget.SwitchCompat
 import android.util.AttributeSet
 import android.view.View
 import android.widget.CompoundButton
-import android.widget.FrameLayout
 
 /**
  * Created by EmersonMoura on 9/6/16.
  */
 
-class SettingsSwitch : FrameLayout {
+class SettingsSwitch : ConstraintLayout {
 
     private lateinit var btnSwitch: SwitchCompat
     private var listener: CompoundButton.OnCheckedChangeListener? = null
@@ -37,14 +35,7 @@ class SettingsSwitch : FrameLayout {
         init(attrs)
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int) : super(
-            context, attrs, defStyleAttr, defStyleRes) {
-
-        init(attrs)
-    }
-
-    fun init(attrs: AttributeSet?) {
+    fun init(_attrs: AttributeSet?) {
         View.inflate(context, R.layout.component_settings_switch, this)
 
         btnSwitch = findViewById(R.id.btn_switch)
@@ -59,13 +50,13 @@ class SettingsSwitch : FrameLayout {
             }
         }
 
-        if (attrs != null) {
+        if (_attrs != null) {
             val a = context.theme
-                    .obtainStyledAttributes(attrs, R.styleable.SettingsSwitch, 0, 0)
+                    .obtainStyledAttributes(_attrs, R.styleable.SettingsSwitch, 0, 0)
 
-            txtTitle.text = a.getString(R.styleable.SettingsSwitch_SB_title)
+            txtTitle.text = a.getString(R.styleable.SettingsSwitch_title)
 
-            txtContent.text = a.getString(R.styleable.SettingsSwitch_SB_content)
+            txtContent.text = a.getString(R.styleable.SettingsSwitch_text)
         }
     }
 

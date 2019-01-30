@@ -49,9 +49,9 @@ public class SettingsHeader extends FrameLayout {
 			TypedArray a = getContext().getTheme()
 					.obtainStyledAttributes(_attrs, R.styleable.SettingsHeader, 0, 0);
 
-			AppCompatTextView lTxtTitle = (AppCompatTextView) findViewById(R.id.txt_title);
+			AppCompatTextView lTxtTitle = findViewById(R.id.txt_title);
 
-			lTxtTitle.setText(a.getString(R.styleable.SettingsHeader_SB_title));
+			lTxtTitle.setText(a.getString(R.styleable.SettingsHeader_title));
 		}
 	}
 }

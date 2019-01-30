@@ -1,5 +1,0 @@
-<resources>
-	<declare-styleable name="SettingsHeader">
-		<attr name="SB_title"/>
-	</declare-styleable>
-</resources>

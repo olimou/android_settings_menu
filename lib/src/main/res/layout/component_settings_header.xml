@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			 android:layout_width="match_parent"
-			 android:layout_height="wrap_content"
-			 android:orientation="horizontal">
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
 
-	<android.support.v7.widget.AppCompatTextView
-		android:id="@+id/txt_title"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_margin="16dp"
-		android:text="Linha do tempo"
-		android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-		android:textColor="@color/text_secondary_light"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/text_secondary_light"
+        tools:text="Linha do tempo"/>
 
-	<include layout="@layout/component_settings_line"/>
+    <include layout="@layout/component_settings_line"/>
 </FrameLayout>
