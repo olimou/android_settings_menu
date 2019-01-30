@@ -39,11 +39,15 @@ class SettingsSwitch : ConstraintLayout {
         View.inflate(context, R.layout.component_settings_switch, this)
 
         btnSwitch = findViewById(R.id.btn_switch)
+        btnSwitch.isClickable = false
         txtTitle = findViewById(R.id.txt_title)
         txtContent = findViewById(R.id.txt_content)
 
         if (!isInEditMode) {
-            setOnClickListener { btnSwitch.isChecked = !btnSwitch.isChecked }
+            setOnClickListener {
+                btnSwitch.isChecked = !btnSwitch.isChecked
+                listener?.onCheckedChanged(btnSwitch, btnSwitch.isChecked)
+            }
         }
 
         if (_attrs != null) {
@@ -62,15 +66,12 @@ class SettingsSwitch : ConstraintLayout {
 
     var checked: Boolean
         get() = btnSwitch.isChecked
-        set(_checked) {
-            btnSwitch.setOnCheckedChangeListener(null)
-            btnSwitch.isChecked = _checked
-            btnSwitch.setOnCheckedChangeListener(listener)
+        set(checked) {
+            btnSwitch.isChecked = checked
         }
 
-    fun setOnCheckedChangeListener(_change: CompoundButton.OnCheckedChangeListener) {
-        listener = _change
-        btnSwitch.setOnCheckedChangeListener(_change)
+    fun setOnCheckedChangeListener(checkedChangeListener: CompoundButton.OnCheckedChangeListener) {
+        listener = checkedChangeListener
     }
 
     override fun setEnabled(enabled: Boolean) {
