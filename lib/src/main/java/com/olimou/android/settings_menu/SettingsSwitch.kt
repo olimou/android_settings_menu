@@ -44,20 +44,24 @@ class SettingsSwitch : FrameLayout {
         init(attrs)
     }
 
-    fun init(_attrs: AttributeSet?) {
+    fun init(attrs: AttributeSet?) {
         View.inflate(context, R.layout.component_settings_switch, this)
 
-        btnSwitch = findViewById(R.id.btn_switch) as SwitchCompat
-        txtTitle = findViewById(R.id.txt_title) as AppCompatTextView
-        txtContent = findViewById(R.id.txt_content) as AppCompatTextView
+        btnSwitch = findViewById(R.id.btn_switch)
+        btnSwitch.isClickable = false
+        txtTitle = findViewById(R.id.txt_title)
+        txtContent = findViewById(R.id.txt_content)
 
         if (!isInEditMode) {
-            setOnClickListener { btnSwitch.isChecked = !btnSwitch.isChecked }
+            setOnClickListener {
+                btnSwitch.isChecked = !btnSwitch.isChecked
+                listener?.onCheckedChanged(btnSwitch, btnSwitch.isChecked)
+            }
         }
 
-        if (_attrs != null) {
+        if (attrs != null) {
             val a = context.theme
-                    .obtainStyledAttributes(_attrs, R.styleable.SettingsSwitch, 0, 0)
+                    .obtainStyledAttributes(attrs, R.styleable.SettingsSwitch, 0, 0)
 
             txtTitle.text = a.getString(R.styleable.SettingsSwitch_SB_title)
 
@@ -71,15 +75,12 @@ class SettingsSwitch : FrameLayout {
 
     var checked: Boolean
         get() = btnSwitch.isChecked
-        set(_checked) {
-            btnSwitch.setOnCheckedChangeListener(null)
-            btnSwitch.isChecked = _checked
-            btnSwitch.setOnCheckedChangeListener(listener)
+        set(checked) {
+            btnSwitch.isChecked = checked
         }
 
-    fun setOnCheckedChangeListener(_change: CompoundButton.OnCheckedChangeListener) {
-        listener = _change
-        btnSwitch.setOnCheckedChangeListener(_change)
+    fun setOnCheckedChangeListener(checkedChangeListener: CompoundButton.OnCheckedChangeListener) {
+        listener = checkedChangeListener
     }
 
     override fun setEnabled(enabled: Boolean) {
