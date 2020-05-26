@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:background="@color/white"
+			 android:orientation="horizontal">
+
+	<android.support.v7.widget.AppCompatImageView
+		android:id="@+id/img_icon"
+		android:layout_width="24dp"
+		android:layout_height="24dp"
+		android:layout_marginBottom="12dp"
+		android:layout_marginLeft="16dp"
+		android:layout_marginTop="12dp"
+		android:tint="@color/grey_600"/>
+
+	<android.support.v7.widget.AppCompatTextView
+		android:id="@+id/txt_content"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="72dp"
+		android:text="Conteúdo"
+		android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+		android:textColor="@color/text_primary_light"/>
+
+	<android.support.v7.widget.AppCompatImageView
+		android:id="@+id/img_icon_action"
+		android:layout_width="24dp"
+		android:layout_height="24dp"
+		android:layout_gravity="right|center_vertical"
+		android:layout_marginBottom="12dp"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		android:layout_marginTop="12dp"
+		android:tint="@color/grey_600"/>
+
+	<include layout="@layout/component_settings_line"/>
+</FrameLayout>
